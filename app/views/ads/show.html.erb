@@ -1,0 +1,9 @@
+<h1><%= @ad.name %></h1>
+<h3>Posted by <%= link_to @ad.renter.user_name, @ad.renter %></h3>
+<ul>
+  <h2><%= @ad.item_description %></h2>
+  <img src= <%= @ad.image_path %>>
+<% @ad.comments.each do |review| %>
+<li><%= review.rentee.user_name %> said "<%= review.comment %>"</li>
+<% end %>
+</ul>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_141633) do
+ActiveRecord::Schema.define(version: 2018_12_04_210310) do
 
   create_table "ads", force: :cascade do |t|
     t.integer "renter_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_12_04_141633) do
     t.string "image_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["category_id"], name: "index_ads_on_category_id"
     t.index ["renter_id"], name: "index_ads_on_renter_id"
   end
@@ -41,7 +42,7 @@ ActiveRecord::Schema.define(version: 2018_12_04_141633) do
 
   create_table "users", force: :cascade do |t|
     t.string "user_name"
-    t.string "password"
+    t.string "password_digest"
     t.string "email"
     t.string "location"
     t.datetime "created_at", null: false
