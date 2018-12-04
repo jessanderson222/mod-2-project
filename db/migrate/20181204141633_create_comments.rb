@@ -1,7 +1,7 @@
 class CreateComments < ActiveRecord::Migration[5.2]
   def change
     create_table :comments do |t|
-      t.references :rentee, foreign_key: true
+      t.references :rentee, foreign_key: {to_table: :users}
       t.references :ad, foreign_key: true
       t.string :comment
 

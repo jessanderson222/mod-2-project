@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 2018_12_04_141633) do
   create_table "ads", force: :cascade do |t|
     t.integer "renter_id"
     t.integer "category_id"
+    t.string "item_description"
+    t.string "image_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_ads_on_category_id"

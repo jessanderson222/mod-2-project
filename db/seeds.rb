@@ -1,1 +1,2 @@
-User.create(user_name: "trevor", password: "thisistrevor", email: "trevor@email.com", location: "Brooklyn")
+User.create(user_name: "nottrevor", password: "thisisnottrevor", email: "nottrevor@email.com", location: "Brooklyn")
+Category.create(name: 'Home Goods')
