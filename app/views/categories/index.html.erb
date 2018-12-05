@@ -1,4 +1,5 @@
 <h1>Name of Website</h1>
+<h2>Welcom <%=@user.user_name %></h2>
   <ul>
 <% @categories.each do |category| %>
 <li><%= link_to category.name, category %></li>
