@@ -20,7 +20,7 @@ class AdsController < ApplicationController
   end
   def search
     # byebug
-    @ads = Ad.where("name LIKE ?", params[:q])
+    @ads = Ad.where("name LIKE ?", "%#{params[:q]}%")
   end
 
   private
