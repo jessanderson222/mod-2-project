@@ -12,8 +12,7 @@
 
   <body>
     <div><%= link_to "Home", root_path %></div>
-    <div></div>
-
+    <div>
       <% if session[:user_id] %>
         <%= link_to "My Profile", user_path(session[:user_id]) %><br>
         <%= link_to "Logout", logout_path, method: :delete %>
@@ -22,6 +21,13 @@
       <% else %>
         <%= link_to "Login", login_path %>
       <% end %>
+      </div>
+    <div><br>
+      <%= form_tag("/search", method: "post") do %>
+  <%= label_tag(:q, "Search for Items:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
     </div>
     <%= yield %>
   </body>

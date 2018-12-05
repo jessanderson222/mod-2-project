@@ -16,7 +16,11 @@ class AdsController < ApplicationController
   end
 
   def show
-    @comment = Comment.new 
+    @comment = Comment.new
+  end
+  def search
+    # byebug
+    @ads = Ad.where("name LIKE ?", params[:q])
   end
 
   private

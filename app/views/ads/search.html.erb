@@ -1,0 +1,6 @@
+  <h1>List of search items!!!</h1>
+<ul>
+  <% @ads.each do |ad| %>
+    <li><%= link_to ad.name, ad %> </li>
+    <% end %>
+</ul>
