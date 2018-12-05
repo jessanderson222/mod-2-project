@@ -2,6 +2,7 @@ Rails.application.routes.draw do
    resources :categories, only:[:show]
    resources :ads, only:[:show, :new, :create]
    resources :users, only:[:show, :new, :create]
+   resources :comments, only:[:new, :create]
    get "/login", to: "sessions#new"
    post "/login", to: "sessions#create"
    delete "/logout", to: "sessions#destroy"

@@ -7,3 +7,10 @@
 <li><%= review.rentee.user_name %> said "<%= review.comment %>"</li>
 <% end %>
 </ul>
+
+<%= form_for @comment do |f| %>
+<%= f.hidden_field :ad_id, :value => @ad.id %>
+<%= f.label "Leave a Comment" %>
+<%= f.text_field :comment %>
+<%= f.submit %>
+<% end  %>

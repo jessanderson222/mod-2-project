@@ -1,0 +1,13 @@
+<%= form_for @ad do |f|%>
+
+<%= f.label "Item Name:" %>
+<%= f.text_field :name %>
+
+<%= f.label "Item Description:" %>
+<%= f.text_field :item_description %>
+
+<%= f.label "Link to image:" %>
+<%= f.text_field :image_path %>
+<%= f.collection_select :category_id, @categories, :id, :name  %>
+<%= f.submit %>
+<% end %>
