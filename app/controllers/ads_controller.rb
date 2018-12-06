@@ -16,6 +16,7 @@ class AdsController < ApplicationController
   end
 
   def show
+    @categories = Category.all
     @comment = Comment.new
   end
   def search
