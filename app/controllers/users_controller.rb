@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    @categories = Category.all
     @user = User.new
   end
 
@@ -30,6 +31,6 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:user_name, :email, :location, :password)
+    params.require(:user).permit(:user_name, :email, :location, :password, :img_path)
   end
 end

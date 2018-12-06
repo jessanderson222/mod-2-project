@@ -1,6 +1,14 @@
-  <h1>List of search items!!!</h1>
-<ul>
+  <h3>List of items:</h3>
+<div class="row">
   <% @ads.each do |ad| %>
-    <li><%= link_to ad.name, ad %> </li>
-    <% end %>
-</ul>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title"><%= link_to ad.name, ad %></h4>
+        <p class="card-text"><%= ad.item_description %></p>
+        <a href="<%=ad_path(ad)%>" class="btn btn-primary">View Item</a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
