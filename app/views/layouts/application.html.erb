@@ -33,11 +33,11 @@
     <div class="page-header">
       <%= link_to "Home", root_path %>
       <% if session[:user_id] %>
-        <%= link_to "My Profile", user_path(session[:user_id]) %><br>
-        <%= link_to "Logout", logout_path, method: :delete %>
+        <%= link_to "My Profile", user_path(session[:user_id]) %>
+        <p class="text-right"><%= link_to "Logout", logout_path, method: :delete %></p>
         <%= link_to "Post an ad", new_ad_path %>
       <% else %>
-        <%= link_to "Login", login_path %>
+        <p class="text-right"><%= link_to "Login", login_path %></p>
       <% end %>
       <br>
       <%= form_tag("/search", method: "post") do %>
