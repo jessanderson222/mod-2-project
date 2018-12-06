@@ -1,7 +1,16 @@
-<h1><%= @category.name %></h1>
+<h2><%= @category.name %></h2>
 <p>
-  <ul>
+
+  <div class="row">
 <% @category.ads.each do |ad| %>
-<li><%= link_to ad.name, ad %></li>
-<% end %>
-</ul>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4><%= link_to ad.name, ad %></h4>
+        <p class="card-text"><%= ad.item_description %></p>
+        <a href="<%=ad_path(ad)%>" class="btn btn-primary">See item</a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

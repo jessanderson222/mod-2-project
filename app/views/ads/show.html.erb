@@ -1,17 +1,17 @@
-<h1><%= @ad.name %></h1>
-<h3>Posted by <%= link_to @ad.renter.user_name, @ad.renter %></h3>
+<h2><%= @ad.name %>
+<br><small>Posted by <%= link_to @ad.renter.user_name, @ad.renter %></small></h2>
 <ul>
-  <h2><%= @ad.item_description %></h2>
   <img src= <%= @ad.image_path %>>
+  <br><p class="lead"><%= @ad.item_description %></p>
 <% @ad.comments.each do |review| %>
-<li><%= review.rentee.user_name %> said "<%= review.comment %>"</li>
+<li>"<%= review.comment %>" - <%= link_to review.rentee.user_name, review.rentee %></li>
 <% end %>
 </ul>
 <% if !!session[:user_id] %>
 <%= form_for @comment do |f| %>
 <%= f.hidden_field :ad_id, :value => @ad.id %>
-<%= f.label "Leave a Comment" %>
+<%= f.label "Leave a Comment:" %>
 <%= f.text_field :comment %>
-<%= f.submit %>
+<%= f.submit "Post" %>
 <% end  %>
 <% end %>
