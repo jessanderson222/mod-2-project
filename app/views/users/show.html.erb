@@ -1,20 +1,20 @@
-<h1> <%= @user.user_name %> </h1><br>
-<h2>About</h2><br>
-<h3>Email: <%= @user.email %></h3>
-<h3>Location: <%= @user.location %></h3>
+<h2> <%= @user.user_name %> </h2><br>
+<h3>About</h3><br>
+<h4>Email: <%= @user.email %></h4>
+<h4>Location: <%= @user.location %></h4>
 
 
-<h3><%= @user.user_name %>'s Ads:</h3>
+<h4><%= @user.user_name %>'s Ads:</h4>
 <ul>
 <% @user.ads.each do |ad| %>
 <li><%= link_to ad.name, ad %></li>
 <% end %>
 </ul>
 
-<h3>Recent Comments:</h3>
+<h4>Recent Comments:</h4>
 <ul>
 <% @user.comments.each do |review| %>
-<li><%= link_to review.comment, review.ad %></li>
+<li>"<%= link_to review.comment, review.ad %>"</li>
 <% end %>
 
   </ul>
