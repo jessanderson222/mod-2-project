@@ -1,5 +1,7 @@
 <h1>Name of Website</h1>
-<h2>Welcom <%=@user.user_name %></h2>
+<% if @user != nil %>
+  <h2>Welcome <%=@user.user_name %></h2>
+<% end %>
   <ul>
 <% @categories.each do |category| %>
 <li><%= link_to category.name, category %></li>

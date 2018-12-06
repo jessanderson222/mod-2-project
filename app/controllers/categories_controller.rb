@@ -2,7 +2,11 @@ class CategoriesController < ApplicationController
   before_action :find_category, only: :show
   def index
     @categories = Category.all
-    @user = User.find(session[:user_id])
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    else
+      @user = nil
+    end
   end
 
   def show
