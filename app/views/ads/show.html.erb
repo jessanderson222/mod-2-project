@@ -1,7 +1,7 @@
 <h2><%= @ad.name %>
 <br><small>Posted by <%= link_to @ad.renter.user_name, @ad.renter %></small></h2>
 <ul>
-  <img src= <%= @ad.image_path %>>
+  <img src= <%= @ad.image_path %> class="resize">
   <br><p class="lead"><%= @ad.item_description %></p>
 <% @ad.comments.each do |review| %>
 <li>"<%= review.comment %>" - <%= link_to review.rentee.user_name, review.rentee %></li>
