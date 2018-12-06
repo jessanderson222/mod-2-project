@@ -7,6 +7,7 @@
     <div class="card">
       <div class="card-body">
         <h4><%= link_to ad.name, ad %></h4>
+        <img src=<%= ad.image_path %> class="img-thumbnail">
         <p class="card-text"><%= ad.item_description %></p>
         <a href="<%=ad_path(ad)%>" class="btn btn-primary">See item</a>
       </div>
