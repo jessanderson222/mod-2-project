@@ -21,6 +21,7 @@ class AdsController < ApplicationController
   end
   def search
     # byebug
+    @categories = Category.all
     @ads = Ad.where("name LIKE ?", "%#{params[:q]}%")
   end
 
