@@ -1,24 +1,11 @@
-# README
+# THE YELLOW PAGES
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A social media market place used to buy and sell stuff.
 
-Things you may want to cover:
+Once you create your profile, you can post ads for items by category.
 
-* Ruby version
+![](YellowPages-PostAd2.gif)
 
-* System dependencies
+Users can comment on each other's ads as well as view each other's profiles. A profile includes their name, location, and contact information in order to set up item pick-ups or delivery.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![](YellowPages-commentSmaller.gif)
