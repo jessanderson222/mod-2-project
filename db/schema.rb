@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2018_12_06_211138) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ads", force: :cascade do |t|
-    t.integer "renter_id"
-    t.integer "category_id"
+    t.bigint "renter_id"
+    t.bigint "category_id"
     t.string "item_description"
     t.string "image_path"
     t.datetime "created_at", null: false
@@ -32,8 +35,8 @@ ActiveRecord::Schema.define(version: 2018_12_06_211138) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "rentee_id"
-    t.integer "ad_id"
+    t.bigint "rentee_id"
+    t.bigint "ad_id"
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -51,4 +54,8 @@ ActiveRecord::Schema.define(version: 2018_12_06_211138) do
     t.string "img_path"
   end
 
+  add_foreign_key "ads", "categories"
+  add_foreign_key "ads", "users", column: "renter_id"
+  add_foreign_key "comments", "ads"
+  add_foreign_key "comments", "users", column: "rentee_id"
 end
