@@ -2,6 +2,12 @@
 
 A social media market place used to buy and sell stuff.
 
+Check it out for yourself!
+
+http://the-yellow-pages.herokuapp.com/
+Username: YellowPages
+Password: 123
+
 Once you create your profile, you can post ads for items by category.
 
 ![](YellowPages-PostAd2.gif)
